@@ -1,10 +1,29 @@
+###GET(Read all users)
 get http://localhost:3000/users
 
-###
-post http://localhost:3000/users
+###GET(Read a user by id)
+get http://localhost:3000/users/500
 
-###
+###POST(create new User)
+post http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "id":400,
+    "name":"bhanu",
+    "age":25
+}
+
+
+###PUT(Update a User)
 put http://localhost:3000/user
+Content-Type: application/json
 
-###
-delete http://localhost:3000/user
+{
+    "id":100,
+    "name":"ravi kumar",
+    "age":41
+}
+
+###DELETE(Delete user by id)
+delete http://localhost:3000/users/400
